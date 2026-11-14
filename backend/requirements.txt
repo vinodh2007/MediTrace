@@ -12,3 +12,4 @@ Flask
 Flask-Cors
 cryptography
 web3
+gunicorn
