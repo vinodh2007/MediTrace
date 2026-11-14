@@ -1,0 +1,119 @@
+{
+    "address": "0xD5F876aF1CB3404942270f83fe60e213c2C5F91A",
+    "abi": [
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": false,
+                    "internalType": "string",
+                    "name": "medicineId",
+                    "type": "string"
+                },
+                {
+                    "indexed": false,
+                    "internalType": "string",
+                    "name": "medicineHash",
+                    "type": "string"
+                },
+                {
+                    "indexed": false,
+                    "internalType": "address",
+                    "name": "registeredBy",
+                    "type": "address"
+                },
+                {
+                    "indexed": false,
+                    "internalType": "uint256",
+                    "name": "timestamp",
+                    "type": "uint256"
+                }
+            ],
+            "name": "MedicineRegistered",
+            "type": "event"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "string",
+                    "name": "_medicineId",
+                    "type": "string"
+                }
+            ],
+            "name": "getMedicine",
+            "outputs": [
+                {
+                    "internalType": "string",
+                    "name": "",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "",
+                    "type": "string"
+                },
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "string",
+                    "name": "_medicineId",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_medicineHash",
+                    "type": "string"
+                }
+            ],
+            "name": "registerMedicine",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "string",
+                    "name": "_medicineId",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_medicineHash",
+                    "type": "string"
+                }
+            ],
+            "name": "verifyMedicine",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        }
+    ],
+    "chain_id": 1337,
+    "transaction_hash": "9b28452c1cb4cbdbb1f16d637ef00260cbb09e4d150720cd4c6bb4c5d8fa0af9"
+}

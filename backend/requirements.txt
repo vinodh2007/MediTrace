@@ -1,0 +1,14 @@
+flask
+flask-cors
+web3
+py-solc-x
+qrcode[pil]
+pillow
+cryptography
+Flask
+Flask-Cors
+cryptography
+Flask
+Flask-Cors
+cryptography
+web3

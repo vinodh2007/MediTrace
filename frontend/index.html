@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MediTrace | Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                💊 MediTrace
+            </div>
+
+            <p class="menu-title">MAIN MENU</p>
+
+            <nav>
+                <a href="#dashboard" class="nav-link active">
+                    <span>▦</span> Dashboard
+                </a>
+
+                <a href="#inventory" class="nav-link">
+                    <span>💊</span> Medicine Inventory
+                </a>
+
+                <a href="/register" class="nav-link">
+                    <span>＋</span> Register Medicine
+                </a>
+
+                <a href="/verify" class="nav-link">
+                    <span>✓</span> Verify Medicine
+                </a>
+
+                <a href="/storage" class="nav-link">
+                    <span>📦</span> Storage Dashboard
+                </a>
+
+                <a href="/blockchain" class="nav-link">
+                    <span>⛓</span> Blockchain Records
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <p>MEDICINE SECURITY SYSTEM</p>
+                <small>Version 1.0</small>
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <!-- TOP BAR -->
+            <header class="topbar">
+
+                <div>
+                    <h2>Dashboard Overview</h2>
+                    <p>Welcome to MediTrace Management System</p>
+                </div>
+
+                <div class="admin">
+                    <div class="admin-icon">A</div>
+                    <div>
+                        <strong>Vinodh Shaik</strong>
+                        <small>System Admin</small>
+                    </div>
+                </div>
+
+            </header>
+
+
+            <!-- DASHBOARD -->
+            <section id="dashboard">
+
+                <div class="page-heading">
+                    <div>
+                        <h2>Overview</h2>
+                        <p>Monitor medicine authenticity and storage.</p>
+                    </div>
+
+                    <span class="date-label">November 2026</span>
+                </div>
+
+
+                <!-- STATISTICS CARDS -->
+                <div class="stats-grid">
+
+                    <div class="stat-card blue">
+                        <div class="stat-icon">💊</div>
+                        <p>Total Medicines</p>
+                        <h2 id="totalMedicines">--</h2>
+                        <small>Registered batches</small>
+                    </div>
+
+                    <div class="stat-card green">
+                        <div class="stat-icon">✓</div>
+                        <p>Verified Batches</p>
+                        <h2 id="verifiedBatches">--</h2>
+                        <small>Successfully verified</small>
+                    </div>
+
+                    <div class="stat-card red">
+                        <div class="stat-icon">⚠</div>
+                        <p>Suspicious Batches</p>
+                        <h2 id="suspiciousBatches">--</h2>
+                        <small>Require investigation</small>
+                    </div>
+
+                    <div class="stat-card orange">
+                        <div class="stat-icon">🌡</div>
+                        <p>Storage Alerts</p>
+                        <h2 id="storageAlerts">--</h2>
+                        <small>Storage warnings</small>
+                    </div>
+
+                </div>
+
+
+                <!-- QUICK ACTIONS -->
+                <div class="section-heading">
+                    <h2>Quick Actions</h2>
+                </div>
+
+                <div class="actions-grid">
+
+                    <button class="action-card" onclick="window.location.href='/register'">
+                        <span>＋</span>
+                        <strong>Register Medicine</strong>
+                        <small>Add a new medicine batch</small>
+                    </button>
+
+                    <button class="action-card" onclick="window.location.href='/verify'">
+                        <span>✓</span>
+                        <strong>Verify Medicine</strong>
+                        <small>Check medicine authenticity</small>
+                    </button>
+
+                    <button class="action-card" onclick="window.location.href='/storage'">
+                        <span>📦</span>
+                        <strong>Storage Dashboard</strong>
+                        <small>Manage medicine inventory and expiry</small>
+                    </button>
+
+                    <button class="action-card" onclick="window.location.href='/blockchain'">
+
+                        <span>⛓</span>
+
+                        <strong>Blockchain Records</strong>
+
+                        <small>View transaction history</small>
+
+                    </button>
+
+                </div>
+
+
+                <!-- LOWER SECTION -->
+                <div class="bottom-grid">
+
+                    <!-- MEDICINE TABLE -->
+                    <div class="panel" id="inventory">
+
+                        <div class="panel-heading">
+                            <div>
+                                <h3>Recent Medicines</h3>
+                                <p>Recently registered batches</p>
+                            </div>
+
+                            <span class="view-label">Sample Data</span>
+                        </div>
+
+                        <div class="table-wrapper">
+                            <table>
+
+                                <thead>
+                                    <tr>
+                                        <th>Medicine</th>
+                                        <th>Batch ID</th>
+                                        <th>Manufacturer</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody id="medicineTable">
+                                    <tr>
+                                        <td colspan="4">Loading medicines...</td>
+                                    </tr>
+                                </tbody>
+
+                            </table>
+                        </div>
+
+                    </div>
+
+
+                    <!-- STORAGE -->
+
+                    <div class="panel" id="storage">
+
+                        <div class="panel-heading">
+                            <div>
+                                <h3>Storage Dashboard Summary</h3>
+                                <p>Medicine inventory and expiry overview</p>
+                            </div>
+                        </div>
+
+                        <div class="storage-box">
+
+                            <div class="storage-item">
+                                <span>💊 Total Medicines</span>
+                                <strong id="storageTotalMedicines">--</strong>
+                            </div>
+
+                            <div class="storage-item">
+                                <span>📦 Total Stock</span>
+                                <strong id="storageTotalStock">--</strong>
+                            </div>
+
+                            <div class="storage-item">
+                                <span>⚠️ Expiring Soon</span>
+                                <strong id="storageExpiringSoon">--</strong>
+                            </div>
+
+                            <div class="storage-item">
+                                <span>🔴 Low Stock</span>
+                                <strong id="storageLowStock">--</strong>
+                            </div>
+
+                            <div class="storage-condition">
+                                <span>Storage Dashboard</span>
+
+                                <strong>
+                                    <a href="/storage" style="color: #166534; text-decoration: none;">
+                                        View Dashboard →
+                                    </a>
+                                </strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- BLOCKCHAIN STATUS -->
+                    <div class="blockchain-panel" id="blockchain">
+
+                        <div>
+                            <h3>⛓ Blockchain Network</h3>
+                            <p>Ethereum connection status</p>
+                        </div>
+
+                        <span class="network-status">
+                            Demo Mode
+                        </span>
+
+                    </div>
+
+            </section>
+
+            <div id="notice" class="notice"></div>
+
+            <footer>
+                © 2026 MediTrace | Blockchain-Based Medicine Tracking System
+            </footer>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

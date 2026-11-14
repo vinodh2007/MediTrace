@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MediTrace | Verify Medicine</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <aside class="sidebar">
+
+            <div class="logo">💊 MediTrace</div>
+
+            <p class="menu-title">MAIN MENU</p>
+
+            <nav>
+                <a href="/" class="nav-link">▦ Dashboard</a>
+                <a href="/register" class="nav-link">＋ Register Medicine</a>
+                <a href="/verify" class="nav-link active">✓ Verify Medicine</a>
+                <a href="/storage" class="nav-link">Storage Tracker</a>
+                <a href="/blockchain" class="nav-link">Blockchain Records</a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                MEDICINE SECURITY SYSTEM
+                <small>Version 1.0</small>
+            </div>
+
+        </aside>
+
+        <main class="main-content">
+
+            <header class="topbar">
+                <div>
+                    <h2>Medicine Verification</h2>
+                    <p>Check medicine data integrity using cryptography.</p>
+                </div>
+            </header>
+
+            <section class="panel verification-panel">
+
+                <div class="panel-heading">
+                    <div>
+                        <h3>Verify Medicine Authenticity</h3>
+                        <p>Enter the medicine ID to verify its record.</p>
+                    </div>
+                </div>
+
+                <form id="verifyForm">
+
+                    <div class="form-group">
+                        <label for="medicine_id">Medicine ID</label>
+
+                        <input
+                            type="text"
+                            id="medicine_id"
+                            placeholder="Example: MED-BATCH001"
+                            required
+                        >
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        Verify Medicine
+                    </button>
+
+                </form>
+
+                <!-- Verification results and generated QR code -->
+
+                <div
+                    id="verificationResult"
+                    class="verification-result">
+                </div>
+
+            </section>
+
+            <footer>
+                © 2026 MediTrace | Cryptographic Verification
+            </footer>
+
+        </main>
+
+    </div>
+
+    <script src="verify.js"></script>
+
+</body>
+
+</html>

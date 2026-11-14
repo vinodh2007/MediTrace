@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediTrace - Blockchain Records</title>
+    <link rel="stylesheet" href="/frontend/style.css">
+
+    <style>
+        .records-container {
+            padding: 25px;
+            overflow-x: auto;
+        }
+
+        .records-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: white;
+        }
+
+        .records-table th,
+        .records-table td {
+            padding: 13px;
+            border-bottom: 1px solid #e1eaf3;
+            text-align: left;
+            font-size: 13px;
+        }
+
+        .records-table th {
+            background: #f4f8fc;
+            color: #173b60;
+        }
+
+        .hash-cell {
+            max-width: 220px;
+            overflow-wrap: anywhere;
+        }
+
+        .record-status {
+            color: #166534;
+            font-weight: bold;
+        }
+
+        .page-heading {
+            padding: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="page-heading">
+        <h1>Blockchain Records</h1>
+        <p>Medicine transactions recorded on the Ethereum blockchain.</p>
+        <a href="/">← Back to Dashboard</a>
+    </div>
+
+    <div class="records-container">
+
+        <h2>Transaction History</h2>
+
+        <p id="recordCount">Loading records...</p>
+
+        <table class="records-table">
+            <thead>
+                <tr>
+                    <th>Medicine ID</th>
+                    <th>Medicine Name</th>
+                    <th>Batch ID</th>
+                    <th>Block Number</th>
+                    <th>Transaction Hash</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody id="recordsTableBody">
+                <tr>
+                    <td colspan="7">Loading blockchain records...</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <script src="/frontend/blockchain.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MediTrace | Register Medicine</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <aside class="sidebar">
+
+            <div class="logo">💊 MediTrace</div>
+
+            <p class="menu-title">MAIN MENU</p>
+
+            <nav>
+                <a href="/" class="nav-link">▦ Dashboard</a>
+
+                <a href="/#inventory" class="nav-link">
+                    💊 Medicine Inventory
+                </a>
+
+                <a href="/register" class="nav-link active">
+                    ＋ Register Medicine
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                MEDICINE SECURITY SYSTEM
+                <small>Version 1.0</small>
+            </div>
+
+        </aside>
+
+
+        <main class="main-content">
+
+            <header class="topbar">
+
+                <div>
+                    <h2>Register Medicine</h2>
+
+                    <p>Add a new medicine batch to MediTrace</p>
+                </div>
+
+                <div class="admin">
+                    <div class="admin-icon">A</div>
+
+                    <div>
+                        <strong>Administrator</strong>
+                        <small>System Admin</small>
+                    </div>
+                </div>
+
+            </header>
+
+
+            <div class="panel registration-panel">
+
+                <div class="panel-heading">
+                    <div>
+                        <h3>Medicine Information</h3>
+
+                        <p>
+                            Enter the medicine details carefully.
+                        </p>
+                    </div>
+                </div>
+
+
+                <form id="medicineForm">
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label>Medicine Name</label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                placeholder="Example: Paracetamol"
+                                required
+                            >
+                        </div>
+
+
+                        <div class="form-group">
+                            <label>Batch ID</label>
+
+                            <input
+                                type="text"
+                                id="batch_id"
+                                placeholder="Example: BATCH001"
+                                required
+                            >
+                        </div>
+
+
+                        <div class="form-group">
+                            <label>Manufacturer Name</label>
+
+                            <input
+                                type="text"
+                                id="manufacturer"
+                                placeholder="Example: ABC Pharma"
+                                required
+                            >
+                        </div>
+
+
+                        <div class="form-group">
+                            <label>Quantity</label>
+
+                            <input
+                                type="number"
+                                id="quantity"
+                                min="1"
+                                placeholder="Enter quantity"
+                                required
+                            >
+                        </div>
+
+
+                        <div class="form-group">
+                            <label>Manufacturing Date</label>
+
+                            <input
+                                type="date"
+                                id="manufacturing_date"
+                                required
+                            >
+                        </div>
+
+
+                        <div class="form-group">
+                            <label>Expiry Date</label>
+
+                            <input
+                                type="date"
+                                id="expiry_date"
+                                required
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <div id="message" class="form-message"></div>
+
+
+                    <div class="form-buttons">
+
+                        <button type="submit" class="submit-btn">
+                            Register Medicine
+                        </button>
+
+                        <a href="/" class="cancel-btn">
+                            Cancel
+                        </a>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+
+            <footer>
+                © 2026 MediTrace | Medicine Registration
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <script src="register.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediTrace - Storage Dashboard</title>
+    <link rel="stylesheet" href="/frontend/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>MediTrace</h1>
+        <p>Medicine Storage Management</p>
+    </header>
+
+    <main class="container">
+
+        <h2>Storage Dashboard</h2>
+        <p>Monitor your medicine inventory and expiry dates.</p>
+
+        <section class="dashboard-cards">
+
+            <div class="storage-card">
+                <h3>Total Medicines</h3>
+                <p id="totalMedicines">0</p>
+            </div>
+
+            <div class="storage-card">
+                <h3>Total Stock</h3>
+                <p id="totalStock">0</p>
+            </div>
+
+            <div class="storage-card">
+                <h3>Available Medicines</h3>
+                <p id="availableMedicines">0</p>
+            </div>
+
+            <div class="storage-card">
+                <h3>Expired Medicines</h3>
+                <p id="expiredMedicines">0</p>
+            </div>
+
+            <div class="storage-card low-stock-card">
+                <h3>Low Stock Medicines</h3>
+                <p id="lowStockMedicines">0</p>
+            </div>
+
+            <div class="storage-card expiry-card">
+                <h3>Expiring Soon</h3>
+                <p id="expiringSoonMedicines">0</p>
+            </div>
+
+        </section>
+
+        <section class="storage-table">
+
+            <h2>Medicine Inventory</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Medicine ID</th>
+                        <th>Medicine Name</th>
+                        <th>Batch ID</th>
+                        <th>Quantity</th>
+                        <th>Expiry Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody id="medicineTable">
+                    <tr>
+                        <td colspan="6">Loading medicine records...</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+    <footer>
+        © 2026 MediTrace | Medicine Storage Tracking
+    </footer>
+    <script src="/frontend/storage.js"></script>
+
+</body>
+
+</html>
